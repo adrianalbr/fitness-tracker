@@ -1,12 +1,13 @@
 const db = require("../models");
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-mongoose.set('useFindAndModify', false);
+// mongoose.set('useFindAndModify', false);
 
 module.exports = (app) => {
 
     // get all workouts
     app.get("/api/workouts", (req,res) => {
+        console.log(db);
         db.Workout.find()
             .then(dbWorkouts => {
                 console.log("all dbWorkouts: ", dbWorkouts);

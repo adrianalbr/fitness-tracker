@@ -1,3 +1,4 @@
+const opts = { toJSON: { virtuals: true } };
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -33,7 +34,15 @@ const WorkoutSchema = new Schema({
             }
         },
     ]
-});
+},opts);
+
+WorkoutSchema.virtual('totalDuration').get(function() {
+    let totalTime = 0
+    for (let i = 0; i < this.exercises.length; i++){
+        totalTime += this.exercises[i].duration;
+    }
+    return totalTime;
+  });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
-module.export = Workout;
+module.exports= Workout;
