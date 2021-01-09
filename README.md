@@ -20,6 +20,8 @@ The application is deployed in Heroku here - https://dashboard.heroku.com/apps/s
 
 ## Demo
 
+![Fitness_demo](public/assets/images/Fitness_demo.gif)
+
 ## Credits
 
 Fitness tracker uses:
@@ -27,8 +29,12 @@ Fitness tracker uses:
 - Mogoose
 - Express
 - For deployment it uses heroku
+- For database deployment it uses Mongo Atlas
 
+## Message from Dev
+
+Working out is important! I hope that you find this app useful!
 
 - - -
 
-All rights reserved Adriana Bonilla-Ramirez 2020
+All rights reserved Adriana Bonilla-Ramirez 2021
